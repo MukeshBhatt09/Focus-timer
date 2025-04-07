@@ -129,7 +129,7 @@
 
     <script>
         // Chat functionality
-        // Function to create thinking animation
+        // Function to create thinking animationn
         function showThinkingAnimation() {
             const thinkingMsg = document.createElement('div');
             thinkingMsg.className = 'text-left text-green-600 my-1 thinking-animation';
@@ -152,7 +152,7 @@
             return thinkingMsg;
         }
         
-        // Function to remove thinking animation
+        // Function to remove thinking animationn
         function removeThinkingAnimation() {
             const thinkingMsg = document.getElementById('thinking-animation');
             if (thinkingMsg) {
@@ -169,7 +169,7 @@
             userMsg.textContent = 'You: ' + message;
             chatDisplay.appendChild(userMsg);
             
-            // Show thinking animation
+            // Show thinking animationn
             const thinkingMsg = showThinkingAnimation();
             
             fetch('/chat', {
@@ -179,7 +179,7 @@
             })
             .then(response => response.json())
             .then(data => {
-                // Remove thinking animation
+                // Remove thinking animationn
                 removeThinkingAnimation();
                 
                 const botMsg = document.createElement('div');
