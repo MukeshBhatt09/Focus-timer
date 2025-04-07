@@ -6,8 +6,11 @@ class FocusBot:
     # Add timer integration to FocusBot
     def __init__(self):
         self.timer = FocusTimer()  # Add this line
-        # Configure Gemini AI
-        genai.configure(api_key="AIzaSyDi9dguUXe03mjj1eayIFMALyJpIq_Fb4A")
+        # Configure Gemini AI using environment variable
+        from dotenv import load_dotenv
+        import os
+        load_dotenv()
+        genai.configure(api_key=os.getenv('GOOGLE_API_KEY'))
         self.model = genai.GenerativeModel("gemini-2.0-flash")
         self.conversation_history = []
 
