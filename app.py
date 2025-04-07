@@ -175,6 +175,13 @@ def handle_connect():
     socketio.start_background_task(background_timer)
 
 if __name__ == '__main__':
+    # Start the background timer thread
+    timer_thread = Thread(target=background_timer)
+    timer_thread.daemon = True
+    timer_thread.start()
+    
+    # Run the Flask app with allow_unsafe_werkzeug in development
+    socketio.run(app, debug=True, allow_unsafe_werkzeug=True)
     print("Welcome to Beluga Focus Timer!")
     print("Type 'help' to see available commands")
     print("==================================")
