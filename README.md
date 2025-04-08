@@ -95,4 +95,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - Developed by Team Members (Registration numbers: 12323420, 12310364, 12315099)
 - Inspired by modern focus techniques and productivity research
+<<<<<<< HEAD
 - Built with love for the developer community
+=======
+- Built with love for the developer community
+>>>>>>> d00593b9560888f1be32f068ecc459aee8b82907
